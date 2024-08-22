@@ -94,13 +94,13 @@ button:hover {
 
 .checkout-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .checkbox-group {
     display: flex;
     align-items: center;
-}
+    margin-bottom: 16px;}
 
 .checkbox-group input[type="checkbox"] {
     margin-right: 5px; /* 調整勾選框與文字之間的距離 */
@@ -109,6 +109,16 @@ button:hover {
 .checkbox-group label {
     margin: 0;
     font-size: 16px; /* 可以根據需要調整文字大小 */
+}
+
+.m-4{
+    margin: 16px;
+    width: 100%;
+}
+
+.m-4-l{
+    margin-left:-8px;
+    width: 100%;
 }
 
 
@@ -127,7 +137,6 @@ button:hover {
     }
 
     button {
-        width: 100%;
         margin-bottom: 10px;
     }
 
@@ -138,4 +147,15 @@ button:hover {
     .checkout-buttons button {
         margin-bottom: 10px;
     }
+
+    .m-4{
+        margin: 0px;
+        width: 100%;
+    }
+    
+    .m-4-l{
+        margin-left:0px;
+        width: 100%;
+    }
+    
 }
