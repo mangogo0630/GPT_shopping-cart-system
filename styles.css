@@ -123,7 +123,7 @@ button:hover {
 
 
 
-@media (max-width: 376px) {
+@media (max-width: 576px) {
     body {
         padding: 10px;
     }
