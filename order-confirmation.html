@@ -4,58 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>確認訂單</title>
-    <link rel="stylesheet" href="order-confirmation.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>確認訂單</h1>
+    </header>
 
-</head>
-<body>
-    
-    <h1>Checkout</h1>
+    <main>
+        <section class="order-summary">
+            <h2>訂單詳情</h2>
+            <p>訂單編號: <span id="orderNumber"></span></p>
+            <p>日期: <span id="orderDate"></span></p>
+            <p>總計: NT$<span id="orderTotal"></span></p>
+        </section>
 
-    <p>謝謝，我們已經收到您的訂單。</p>
+        <section class="bank-info">
+            <h3>銀行匯款資訊</h3>
+            <p>愈威顧問管理有限公司</p>
+            <p>銀行: 中信銀行</p>
+            <p>帳號: 255540367346</p>
+            <p>分行代號: 822</p>
+        </section>
 
-    <div class="order-summary">
-        <div>訂單編號: <span id="orderNumber"></span></div>
-        <div>日期: <span id="orderDate"></span></div>
-        <div>總計: NT$<span id="orderTotal"></span></div>
-        <div>付款方式: 銀行轉帳</div>
-    </div>
+        <section class="order-details">
+            <h3>商品明細</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>小計</th>
+                    </tr>
+                </thead>
+                <tbody id="orderItems"></tbody>
+                <tfoot>
+                    <tr>
+                        <td>總計</td>
+                        <td>NT$<span id="totalAmount"></span></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
 
-    <div class="bank-info">
-        <h3>我們的銀行匯款資訊</h3>
-        <p>愈威顧問管理有限公司</p>
-        <p>銀行: 中信銀行</p>
-        <p>帳號: 255540367346</p>
-        <p>分行代號: 822</p>
-    </div>
-
-    <div class="order-details">
-        <h3>訂單詳細資料</h3>
-        <table>
-            <tr>
-                <th>商品</th>
-                <th>小計</th>
-            </tr>
-            <tbody id="orderItems">
-            </tbody>
-            <tr>
-                <td>總計</td>
-                <td>NT$<span id="totalAmount"></span></td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="addresses">
-        <div class="address-box">
-            <h3>訂購人資訊</h3>
-            <p id="billingAddress"></p>
-        </div>
-        <div class="address-box">
-            <h3>收件人資訊</h3>
-            <p id="shippingAddress"></p>
-        </div>
-    </div>
+        <section class="addresses">
+            <div class="address-box">
+                <h3>訂購人資訊</h3>
+                <p id="billingAddress"></p>
+            </div>
+            <div class="address-box">
+                <h3>收件人資訊</h3>
+                <p id="shippingAddress"></p>
+            </div>
+        </section>
+    </main>
 
     <script src="order-confirmation.js"></script>
 </body>

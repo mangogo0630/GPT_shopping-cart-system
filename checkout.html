@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>結帳頁面</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>結帳頁面</h1>
+    <header>
+        <h1>結帳頁面</h1>
+    </header>
 
-    <h2>購物車內容</h2>
-    <div id="cart"></div>
-    <p id="total"></p>
-
-    <button onclick="goBack()">返回購物車</button>
-    <button onclick="proceedToOrderInfo()">確認結帳</button>
+    <main>
+        <section id="cartSection">
+            <h2>購物車內容</h2>
+            <div id="cart"></div>
+            <p id="total"></p>
+            <div class="checkout-buttons">
+                <button onclick="goBack()">返回購物車</button>
+                <button onclick="proceedToOrderInfo()">確認結帳</button>
+            </div>
+        </section>
+    </main>
 
     <script src="checkout.js"></script>
-</body>
-</html>
 </body>
 </html>

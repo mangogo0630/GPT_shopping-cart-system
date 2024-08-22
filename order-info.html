@@ -4,118 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>填寫訂單資訊</title>
-
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>訂單填寫</h1>
+    </header>
 
-    <h1>訂單填寫</h1>
-
-    <form id="orderForm">
-        <!-- 訂購者資訊 -->
-        <div class="form-group">
-            <label for="name">訂購者姓名</label>
-            <input type="text" id="name" required>
-        </div>
-    
-        <div class="form-group">
-            <label for="nickname">暱稱</label>
-            <input type="text" id="nickname" required>
-        </div>
-    
-        <div class="form-group">
-            <label for="phone">電話</label>
-            <input type="text" id="phone" required>
-        </div>
-    
-        <div class="form-group">
-            <label for="email">郵件</label>
-            <input type="email" id="email" required>
-        </div>
-    
-        <!-- 取件/收件方式選擇 -->
-        <div class="form-group">
-            <label for="pickupOption">取件方式</label>
-            <select id="pickupOption" required onchange="handlePickupOptionChange()">
-                <option value="">選擇取件方式</option>
-                <option value="7-11店到店">7-11店到店</option>
-                <option value="全家店到店">全家店到店</option>
-                <option value="宅配">宅配</option>
-            </select>
-        </div>
-    
-        <!-- 取件資訊 -->
-        <div id="storeInfo" class="hidden">
+    <main>
+        <form id="orderForm">
             <div class="form-group">
-                <label for="storeName">取件店名</label>
-                <input type="text" id="storeName">
+                <label for="name">訂購者姓名</label>
+                <input type="text" id="name" required>
             </div>
-            <div class="form-group">
-                <label for="pickupName">取件姓名</label>
-                <input type="text" id="pickupName">
-            </div>
-            <div class="form-group">
-                <label for="pickupPhone">取件電話</label>
-                <input type="text" id="pickupPhone">
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="sameAsOrdererPickup" onclick="copyOrdererInfo('pickup')">
-                <label for="sameAsOrdererPickup">與訂購者相同</label>
-            </div>
-        </div>
-    
-        <!-- 宅配資訊 -->
-        <div id="deliveryInfo" class="hidden">
-            <div class="form-group">
-                <label for="deliveryName">收件姓名</label>
-                <input type="text" id="deliveryName">
-            </div>
-            <div class="form-group">
-                <label for="deliveryPhone">收件電話</label>
-                <input type="text" id="deliveryPhone">
-            </div>
-            <div class="form-group">
-                <label for="deliveryAddress">收件地址</label>
-                <input type="text" id="deliveryAddress">
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="sameAsOrdererDelivery" onclick="copyOrdererInfo('delivery')">
-                <label for="sameAsOrdererDelivery">與訂購者相同</label>
-            </div>
-        </div>
-    
-        <button type="button" onclick="submitOrder()">確認結帳</button>
-    </form>
-    
 
-<script src="order-info.js"></script>
-    <!--<h1>填寫訂單資訊</h1>
+            <div class="form-group">
+                <label for="nickname">暱稱</label>
+                <input type="text" id="nickname" required>
+            </div>
 
-    <form id="orderForm">
-        <label>姓名:</label>
-        <input type="text" id="name" required><br><br>
+            <div class="form-group">
+                <label for="phone">電話</label>
+                <input type="text" id="phone" required>
+            </div>
 
-        <label>電話:</label>
-        <input type="tel" id="phone" required><br><br>
+            <div class="form-group">
+                <label for="email">郵件</label>
+                <input type="email" id="email" required>
+            </div>
 
-        <label>郵件:</label>
-        <input type="email" id="email" required><br><br>
+            <div class="form-group">
+                <label for="pickupOption">取件方式</label>
+                <select id="pickupOption" required onchange="handlePickupOptionChange()">
+                    <option value="">選擇取件方式</option>
+                    <option value="7-11店到店">7-11店到店</option>
+                    <option value="全家店到店">全家店到店</option>
+                    <option value="宅配">宅配</option>
+                </select>
+            </div>
 
-        <label>取件方式:</label>
-        <select id="pickupOption" required>
-            <option value="7-11">7-11 店到店</option>
-            <option value="FamilyMart">全家 店到店</option>
-        </select><br><br>
+            <div id="storeInfo" class="hidden">
+                <div class="form-group">
+                    <label for="storeName">取件店名</label>
+                    <input type="text" id="storeName">
+                </div>
+                <div class="form-group">
+                    <label for="pickupName">取件姓名</label>
+                    <input type="text" id="pickupName">
+                </div>
+                <div class="form-group">
+                    <label for="pickupPhone">取件電話</label>
+                    <input type="text" id="pickupPhone">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="sameAsOrdererPickup" onclick="copyOrdererInfo('pickup')">
+                    <label for="sameAsOrdererPickup">與訂購者相同</label>
+                </div>
+            </div>
 
-        <label>取件店名:</label>
-        <input type="text" id="storeName" required><br><br>
+            <div id="deliveryInfo" class="hidden">
+                <div class="form-group">
+                    <label for="deliveryName">收件姓名</label>
+                    <input type="text" id="deliveryName">
+                </div>
+                <div class="form-group">
+                    <label for="deliveryPhone">收件電話</label>
+                    <input type="text" id="deliveryPhone">
+                </div>
+                <div class="form-group">
+                    <label for="deliveryAddress">收件地址</label>
+                    <input type="text" id="deliveryAddress">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="sameAsOrdererDelivery" onclick="copyOrdererInfo('delivery')">
+                    <label for="sameAsOrdererDelivery">與訂購者相同</label>
+                </div>
+            </div>
 
-        <button type="button" onclick="submitOrder()">確認下單購買</button>
-    </form>
-    <script src="order-info.js"></script>/*-->
+            <button type="button" onclick="submitOrder()">確認結帳</button>
+        </form>
+    </main>
+
+    <script src="order-info.js"></script>
 </body>
 </html>
