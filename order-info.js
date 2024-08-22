@@ -30,7 +30,9 @@ function copyOrdererInfo(type) {
     }
 }
 
-function submitOrder() {
+function submitOrder(event) {
+    event.preventDefault();  // 阻止表單默認的提交行為
+
     const orderDetails = {
         name: document.getElementById('name').value,
         nickname: document.getElementById('nickname').value,
