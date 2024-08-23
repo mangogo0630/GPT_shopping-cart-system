@@ -14,47 +14,54 @@
     <main>
         <form id="orderForm">
             <div class="form-group">
-                <label for="name">訂購者姓名</label>
+                <label for="name">訂購者姓名 <span class="required">*</span></label>
                 <input type="text" id="name" required>
+                <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
             </div>
 
             <div class="form-group">
                 <label for="nickname">暱稱</label>
-                <input type="text" id="nickname" required>
+                <input type="text" id="nickname">
             </div>
 
             <div class="form-group">
-                <label for="phone">電話</label>
+                <label for="phone">電話 <span class="required">*</span></label>
                 <input type="text" id="phone" required>
+                <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
             </div>
 
             <div class="form-group">
-                <label for="email">郵件</label>
+                <label for="email">郵件 <span class="required">*</span></label>
                 <input type="email" id="email" required>
+                <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
             </div>
 
             <div class="form-group">
-                <label for="pickupOption">取件方式</label>
+                <label for="pickupOption">取件方式 <span class="required">*</span></label>
                 <select id="pickupOption" required onchange="handlePickupOptionChange()">
                     <option value="">選擇取件方式</option>
                     <option value="7-11店到店">7-11店到店</option>
                     <option value="全家店到店">全家店到店</option>
                     <option value="宅配">宅配</option>
                 </select>
+                <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
             </div>
 
             <div id="storeInfo" class="hidden">
                 <div class="form-group">
-                    <label for="storeName">取件店名</label>
+                    <label for="storeName">取件店名 <span class="required">*</span></label>
                     <input type="text" id="storeName">
+                    <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
                 </div>
                 <div class="form-group">
-                    <label for="pickupName">取件姓名</label>
+                    <label for="pickupName">取件姓名 <span class="required">*</span></label>
                     <input type="text" id="pickupName">
+                    <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
                 </div>
                 <div class="form-group">
-                    <label for="pickupPhone">取件電話</label>
+                    <label for="pickupPhone">取件電話 <span class="required">*</span></label>
                     <input type="text" id="pickupPhone">
+                    <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="sameAsOrdererPickup" onclick="copyOrdererInfo('pickup')">
@@ -64,16 +71,19 @@
 
             <div id="deliveryInfo" class="hidden">
                 <div class="form-group">
-                    <label for="deliveryName">收件姓名</label>
+                    <label for="deliveryName">收件姓名 <span class="required">*</span></label>
                     <input type="text" id="deliveryName">
+                    <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
                 </div>
                 <div class="form-group">
-                    <label for="deliveryPhone">收件電話</label>
+                    <label for="deliveryPhone">收件電話 <span class="required">*</span></label>
                     <input type="text" id="deliveryPhone">
+                    <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
                 </div>
                 <div class="form-group">
-                    <label for="deliveryAddress">收件地址</label>
+                    <label for="deliveryAddress">收件地址 <span class="required">*</span></label>
                     <input type="text" id="deliveryAddress">
+                    <span class="error-message"></span> <!-- 錯誤訊息顯示區 -->
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="sameAsOrdererDelivery" onclick="copyOrdererInfo('delivery')">

@@ -1,29 +1,18 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 20px;
     background-color: #f9f9f9;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-
-main {
+header, main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+header h1 {
     text-align: center;
-    color: #ffffff;
+    color: #333;
 }
 
 .product, .order-summary, .bank-info, .order-details, .addresses {
@@ -70,22 +59,6 @@ button:hover {
     border-radius: 5px;
     box-sizing: border-box;
 }
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group select {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form-group input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
 
 .hidden {
     display: none;
@@ -138,43 +111,6 @@ button:hover {
     font-size: 16px; /* 可以根據需要調整文字大小 */
 }
 
-.required {
-    color: red;
-}
-
-.error-message {
-    color: red;
-    font-size: 0.875rem;
-    margin-top: 0.5rem;
-    display: none; /* 初始隱藏 */
-}
-
-.input-error {
-    border-color: red;
-}
-
-button[type="submit"] {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* 提示用戶錯誤的樣式 */
-.input-error + .error-message {
-    display: block; /* 如果有錯誤，顯示錯誤訊息 */
-}
-
-
 .m-4{
     margin: 16px;
     width: 100%;
@@ -184,9 +120,6 @@ button[type="submit"]:hover {
     margin-left:-8px;
     width: 100%;
 }
-
-
-
 
 
 
